@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Grid from '../src/components/Grid'
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -11,9 +12,18 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+      
+
+      
+      <section>
+        
+        <Grid limit={10} />
+      </section>
     </div>
   );
 }
-
+const styleLink = document.createElement("link");
+styleLink.rel = "stylesheet";
+styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
+document.head.appendChild(styleLink);
 export default App;
