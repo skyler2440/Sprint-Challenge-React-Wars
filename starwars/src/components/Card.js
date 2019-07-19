@@ -2,17 +2,15 @@ import React from "react";
 import { Header, Table, Image, Button } from "semantic-ui-react";
 
 
-export default function Card({ imgUrl, breed }) {
+export default function Card(props) {
   return (
     <Table.Row>
       <Table.Cell>
-        <Header as="h4" image>
-          <Image src={imgUrl} rounded size="mini" />
-          <Header.Content>{breed}</Header.Content>
-        </Header>
+        <Header as="h4">
+          <p>{props.name}</p></Header>
       </Table.Cell>
       <Table.Cell>
-        <Button>Adopt Me</Button>
+        <p>{props.height}</p>
       </Table.Cell>
     </Table.Row>
   );

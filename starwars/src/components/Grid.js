@@ -5,7 +5,7 @@ import axios from "axios";
 import Card from "./Card";
 
 export default function Grid({ limit }) {
-  // https://dog.ceo/api/breed/hound/images/random/15
+  
   const [people, setPeople] = useState([]);
   
 
@@ -28,13 +28,13 @@ export default function Grid({ limit }) {
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Name</Table.HeaderCell>
-            <Table.HeaderCell>Adopt Me</Table.HeaderCell>
+            <Table.HeaderCell>Height</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
           {people.map(name => {
-            return <Card key={name}  imgUrl={name} />;
+            return <Card key={name}  name={name.name} height={name.height} />;
           })}
         </Table.Body>
       </Table>
